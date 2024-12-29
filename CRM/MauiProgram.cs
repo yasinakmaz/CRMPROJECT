@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CRM.Pages;
+using Microsoft.Extensions.Logging;
 
 namespace CRM
 {
@@ -18,6 +19,8 @@ namespace CRM
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            builder.Services.AddTransient<LoginPage>();
+            builder.Services.AddTransient<MenuPage>();
 
             return builder.Build();
         }

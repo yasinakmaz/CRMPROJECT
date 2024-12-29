@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRM.Pages.LoginPage"
+             Title="">
+
+    <Grid Margin="10">
+        <Grid HorizontalOptions="Center" VerticalOptions="Center">
+            <VerticalStackLayout WidthRequest="{OnIdiom Desktop=400,Phone=300,Tablet=300,Watch=1000}" Spacing="10">
+                <Entry x:Name="TxtEmail" Placeholder="E-Mail Veya Kullanıcı Adı"></Entry>
+                <Entry x:Name="TxtPassword" Placeholder="Parola"></Entry>
+                <HorizontalStackLayout>
+                    <CheckBox x:Name="ChkRememberMe" VerticalOptions="End"></CheckBox>
+                    <Button x:Name="BtnRememberMe" BackgroundColor="Transparent" TextColor="White" Text="Beni Hatırla"></Button>
+                </HorizontalStackLayout>
+                <Button x:Name="BtnLogin" Clicked="BtnLogin_Clicked" Text="Giriş Yap"></Button>
+            </VerticalStackLayout>
+        </Grid>
+        <Button Text="Ayarlar" HorizontalOptions="End" VerticalOptions="End"></Button>
+    </Grid>
+    
+</ContentPage>
